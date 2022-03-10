@@ -13,7 +13,7 @@ func TestMultiplication(t *testing.T) {
 	product := five.Times(2)
 	assert.Equal(t, NewDollar(10), product)
 	product = five.Times(3)
-	assert.Equal(t, 15, product.Amount())
+	assert.Equal(t, NewDollar(15), product)
 }
 
 func TestEquality(t *testing.T) {
