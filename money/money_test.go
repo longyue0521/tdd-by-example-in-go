@@ -22,4 +22,5 @@ func TestEquality(t *testing.T) {
 
 func TestEqualityByEquals(t *testing.T) {
 	assert.True(t, NewDollar(3).Equals(NewDollar(3)))
+	assert.False(t, NewDollar(6).Equals(NewDollar(7)))
 }
