@@ -19,3 +19,7 @@ func TestMultiplication(t *testing.T) {
 func TestEquality(t *testing.T) {
 	assert.Equal(t, NewDollar(5), NewDollar(5))
 }
+
+func TestEqualityByEquals(t *testing.T) {
+	assert.True(t, NewDollar(3).Equals(NewDollar(3)))
+}
