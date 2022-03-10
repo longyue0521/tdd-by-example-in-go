@@ -13,7 +13,7 @@ func (d *Dollar) Times(multiplier int) *Dollar {
 }
 
 func (d *Dollar) Equals(dollar *Dollar) bool {
-	return false
+	return true
 }
 
 func (d *Dollar) Amount() int {
