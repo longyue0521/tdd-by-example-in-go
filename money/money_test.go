@@ -22,8 +22,6 @@ func TestEquality(t *testing.T) {
 func TestEqualityByEquals(t *testing.T) {
 	assert.True(t, NewDollar(3).Equals(NewDollar(3)))
 	assert.False(t, NewDollar(6).Equals(NewDollar(7)))
-	assert.True(t, NewFranc(4).Equals(NewFranc(4)))
-	assert.False(t, NewFranc(8).Equals(NewFranc(9)))
 }
 
 func TestFrancMultiplication(t *testing.T) {
@@ -38,8 +36,6 @@ func TestCurrency(t *testing.T) {
 }
 
 func TestDifferentTypeEquality(t *testing.T) {
-	assert.True(t, NewMoney(10, "CHF").Equals(NewFranc(10)))
-	assert.False(t, NewMoney(10, "USD").Equals(NewFranc(10)))
 	assert.False(t, NewDollar(10).Equals(NewFranc(10)))
 }
 
