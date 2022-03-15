@@ -1,16 +1,15 @@
 package money
 
 type Dollar struct {
-	amount int
 	*money
 }
 
 func NewDollar(amount int) *Dollar {
-	return &Dollar{amount: amount}
+	return &Dollar{&money{amount: amount}}
 }
 
 func (d *Dollar) Times(multiplier int) *Dollar {
-	return &Dollar{amount: d.amount * multiplier}
+	return &Dollar{&money{amount: d.amount * multiplier}}
 }
 
 func (d *Dollar) Equals(dollar *Dollar) bool {

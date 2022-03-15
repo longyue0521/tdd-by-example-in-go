@@ -1,3 +1,5 @@
 package money
 
-type money struct{}
+type money struct{
+	amount int
+}
