@@ -5,6 +5,7 @@ type Money interface {
 	Currency() string
 	Equals(money Money) bool
 	Times(multiplier int) Money
+	Plus(money Money) Money
 }
 
 type money struct {
