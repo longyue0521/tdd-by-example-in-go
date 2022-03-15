@@ -25,7 +25,7 @@ func (m *money) Currency() string {
 }
 
 func (m *money) Equals(money Money) bool {
-	return m.Amount() == money.Amount()
+	return m.Amount() == money.Amount() && m.Currency() == money.Currency()
 }
 
 func (m *money) Times(multiplier int) Money {
