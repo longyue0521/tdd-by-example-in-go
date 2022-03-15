@@ -9,5 +9,5 @@ func NewFranc(amount int) Money {
 }
 
 func (d *Franc) Times(multiplier int) Money {
-	return &Franc{NewMoney(d.amount*multiplier, d.currency)}
+	return NewMoney(d.amount*multiplier, d.currency)
 }
