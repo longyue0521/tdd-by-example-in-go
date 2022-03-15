@@ -16,6 +16,6 @@ func (d *Franc) Amount() int {
 	return d.amount
 }
 
-func (d *Franc) Equals(dollar *Franc) bool {
+func (d *Franc) Equals(dollar Money) bool {
 	return d.Amount() == dollar.Amount()
 }
