@@ -5,11 +5,11 @@ type Franc struct {
 }
 
 func NewFranc(amount int) Money {
-	return &Franc{NewMoney(amount, "CHF")}
+	return newFranc(amount, "CHF")
 }
 
 func (d *Franc) Times(multiplier int) Money {
-	return &Franc{NewMoney(d.amount*multiplier, d.currency)}
+	return newFranc(d.amount*multiplier, d.currency)
 }
 
 func newFranc(amount int, currency string) Money {
