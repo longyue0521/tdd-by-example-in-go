@@ -17,5 +17,5 @@ func (d *Dollar) Amount() int {
 }
 
 func (d *Dollar) Equals(dollar *Dollar) bool {
-	return d.amount == dollar.amount
+	return d.Amount() == dollar.Amount()
 }
