@@ -3,6 +3,7 @@ package money
 type Money interface {
 	Amount() int
 	Equals(money Money) bool
+	Times(multiplier int) Money
 }
 
 type money struct {
@@ -14,5 +15,5 @@ func (m *money) Amount() int {
 }
 
 func (m *money) Equals(money Money) bool {
-	return m.Amount() ==  money.Amount()
+	return m.Amount() == money.Amount()
 }
