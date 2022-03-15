@@ -2,10 +2,11 @@ package money
 
 type Franc struct {
 	*money
+	currency string
 }
 
 func NewFranc(amount int) Money {
-	return &Franc{&money{amount: amount}}
+	return &Franc{&money{amount: amount}, "CHF"}
 }
 
 func (d *Franc) Times(multiplier int) Money {
@@ -13,5 +14,5 @@ func (d *Franc) Times(multiplier int) Money {
 }
 
 func (d *Franc) Currency() string {
-	return "CHF"
+	return d.currency
 }
