@@ -2,6 +2,7 @@ package money
 
 type Money interface {
 	Amount() int
+	Currency() string
 	Equals(money Money) bool
 	Times(multiplier int) Money
 }
