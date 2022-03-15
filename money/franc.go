@@ -4,7 +4,7 @@ type Franc struct {
 	*money
 }
 
-func NewFranc(amount int) *Franc {
+func NewFranc(amount int) Money {
 	return &Franc{&money{amount: amount}}
 }
 
