@@ -7,7 +7,3 @@ type Dollar struct {
 func NewDollar(amount int) Money {
 	return NewMoney(amount, "USD")
 }
-
-func (d *Dollar) Times(multiplier int) Money {
-	return NewMoney(d.amount*multiplier, d.currency)
-}
