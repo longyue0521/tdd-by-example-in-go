@@ -11,3 +11,7 @@ func NewFranc(amount int) Money {
 func (d *Franc) Times(multiplier int) Money {
 	return NewFranc(d.amount * multiplier)
 }
+
+func (d *Franc) Currency() string {
+	return "CHF"
+}

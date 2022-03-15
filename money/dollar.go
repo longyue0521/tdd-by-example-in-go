@@ -11,3 +11,7 @@ func NewDollar(amount int) Money {
 func (d *Dollar) Times(multiplier int) Money {
 	return NewDollar(d.amount * multiplier)
 }
+
+func (d *Dollar) Currency() string {
+	return "USD"
+}
