@@ -12,6 +12,10 @@ type money struct {
 	currency string
 }
 
+func NewMoney(amount int, currency string) *money {
+	return &money{amount: amount, currency: currency}
+}
+
 func (m *money) Amount() int {
 	return m.amount
 }
