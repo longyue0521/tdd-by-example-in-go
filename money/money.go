@@ -29,5 +29,5 @@ func (m *money) Equals(money Money) bool {
 }
 
 func (m *money) Times(multiplier int) Money {
-	return nil
+	return NewMoney(m.amount*multiplier, m.currency)
 }
