@@ -5,6 +5,10 @@ type Money interface {
 	Equals(money Money) bool
 }
 
-type money struct{
+type money struct {
 	amount int
+}
+
+func (m *money) Amount() int {
+	return m.amount
 }
