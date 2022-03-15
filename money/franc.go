@@ -8,6 +8,6 @@ func NewFranc(amount int) *Franc {
 	return &Franc{&money{amount: amount}}
 }
 
-func (d *Franc) Times(multiplier int) *Franc {
+func (d *Franc) Times(multiplier int) Money {
 	return &Franc{&money{amount: d.amount * multiplier}}
 }
