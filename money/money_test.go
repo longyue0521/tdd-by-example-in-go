@@ -36,3 +36,9 @@ func TestCurrency(t *testing.T) {
 	assert.Equal(t, "USD", NewDollar(1).Currency())
 	assert.Equal(t, "CHF", NewFranc(1).Currency())
 }
+
+func TestDifferentTypeEquality(t *testing.T) {
+	assert.True(t, NewMoney(10, "CHF").Equals(NewFranc(10)))
+	assert.False(t, NewMoney(10, "USD").Equals(NewFranc(10)))
+	assert.False(t, NewDollar(10).Equals(NewFranc(10)))
+}
