@@ -42,3 +42,9 @@ func TestDifferentTypeEquality(t *testing.T) {
 	assert.False(t, NewMoney(10, "USD").Equals(NewFranc(10)))
 	assert.False(t, NewDollar(10).Equals(NewFranc(10)))
 }
+
+func TestMoneyMultiplication(t *testing.T) {
+	five := NewMoney(5, "USD")
+	assert.Equal(t, NewMoney(10, "USD"), five.Times(2))
+	assert.Equal(t, NewMoney(15, "USD"), five.Times(3))
+}
