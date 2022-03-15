@@ -2,6 +2,7 @@ package money
 
 type Franc struct {
 	amount int
+	*money
 }
 
 func NewFranc(amount int) *Franc {
