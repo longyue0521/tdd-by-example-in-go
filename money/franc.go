@@ -11,7 +11,3 @@ func NewFranc(amount int) *Franc {
 func (d *Franc) Times(multiplier int) *Franc {
 	return &Franc{&money{amount: d.amount * multiplier}}
 }
-
-func (d *Franc) Equals(money Money) bool {
-	return d.Amount() == money.Amount()
-}
