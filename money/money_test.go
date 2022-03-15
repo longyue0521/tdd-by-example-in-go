@@ -38,3 +38,9 @@ func TestCurrency(t *testing.T) {
 func TestDifferentTypeEquality(t *testing.T) {
 	assert.False(t, NewDollar(10).Equals(NewFranc(10)))
 }
+
+func TestSimpleAddition(t *testing.T) {
+	sum := NewDollar(5).Plus(NewDollar(5))
+	assert.True(t, NewDollar(10).Equals(sum))
+	assert.Equal(t, NewDollar(10), sum)
+}
