@@ -12,3 +12,7 @@ type money struct {
 func (m *money) Amount() int {
 	return m.amount
 }
+
+func (m *money) Equals(money Money) bool {
+	return m.Amount() ==  money.Amount()
+}
