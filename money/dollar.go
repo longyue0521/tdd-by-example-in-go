@@ -2,6 +2,7 @@ package money
 
 type Dollar struct {
 	amount int
+	*money
 }
 
 func NewDollar(amount int) *Dollar {
