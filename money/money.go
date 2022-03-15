@@ -33,6 +33,10 @@ func (m *money) Times(multiplier int) Money {
 	return NewMoney(m.amount*multiplier, m.currency)
 }
 
+func (m *money) Plus(money Money) Money {
+	return NewMoney(m.amount+money.Amount(), m.currency)
+}
+
 func NewDollar(amount int) Money {
 	return NewMoney(amount, "USD")
 }
